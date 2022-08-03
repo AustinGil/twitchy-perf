@@ -47,9 +47,11 @@ if (cluster.isPrimary) {
   console.log(`Server is running on http://${config.HOST}:${config.PORT}`);
 }
 
+// 0a. Server monitoring & Linode longview (server metrics)
+// 0b. Client audit (client metrics)
 // 1. Web frameworks (node, express, fastify)
 // 2. Clusters (utilize all CPUs available)
-// 3. Server monitoring & Linode longview (server metrics)
+// 3. Partytown integration
 
 // SERVER SIDE:
 // Manual/synthetic testing: unit tests
@@ -62,6 +64,6 @@ if (cluster.isPrimary) {
 // Real user monitoring: mPulse
 // HTTP priority hints (prefetch/preconnect)
 // Deferred script loading
-// Partytown.js
 // JS client side perf reporting
 // Image optimization (size, quality, lazy)
+// Resource offloading (CDN, EdgeWorker)
