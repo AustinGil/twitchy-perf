@@ -76,10 +76,10 @@ export default function (config) {
       ? `<header class="bg-blue-500">
           <h1 class="max-w-lg m-auto py-4 px-2 text-4xl text-white">${config.TITLE}</h1>
         </header>`
-      : ''
+    : ''
     }
 
-    <main class="my-8 px-2">
+    <main class="max-w-lg mx-auto my-8 px-2">
       <table class="w-full mb-8">
         <tr>
           <th>Number of CPUs:</th>
@@ -123,13 +123,14 @@ export default function (config) {
           <th>Resident Set Size:</th>
           <td>${convertBytes(memoryUsageStats.rss)}</td>
         </tr>
-        ${config.START_TIME
+        ${
+    config.START_TIME
       ? `<tr>
           <th>Request Processing Time:</th>
           <td>${`${Number(hrtime.bigint() - config.START_TIME) / 1000000
-      } milliseconds`}</td>
+    } milliseconds`}</td>
         </tr>`
-      : ''
+    : ''
         }
       </table>
 
