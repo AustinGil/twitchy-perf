@@ -58,6 +58,7 @@ if (cluster.isPrimary) {
 // Caching: Redis
 // Application performance monitoring (New Relic / Dynatrace)
 // Time series DB
+// GZIP/Brottli
 
 // CLIENT SIDE:
 // Caching: CDN, Browser, HTTP

@@ -108,7 +108,8 @@ export default function (config) {
         <tr>
           <th>Free Memory:</th>
           <td>${convertBytes(os.freemem())} (${(
-    os.totalmem() / os.freemem()
+    (os.freemem() / os.totalmem()) *
+    100
   ).toFixed(2)}%)</td>
         </tr>
         <tr>
