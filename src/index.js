@@ -1,4 +1,3 @@
-import 'newrelic';
 import cluster from 'node:cluster';
 import { cpus } from 'node:os';
 import * as config from './config.js';
@@ -50,15 +49,13 @@ if (cluster.isPrimary) {
 
 // 1. Web frameworks (node, express, fastify)
 // 2. Clusters (utilize all CPUs available)
+// 3. Server monitoring & Linode longview (server metrics)
 
 // SERVER SIDE:
-// Linode longview product / extended metrics
 // Manual/synthetic testing: unit tests
 // Caching: Redis
-// Server monitoring in Linode
-// Application performance monitoring
+// Application performance monitoring (New Relic / Dynatrace)
 // Time series DB
-// New Relic / Dynatrace
 
 // CLIENT SIDE:
 // Caching: CDN, Browser, HTTP

@@ -16,6 +16,7 @@ export default function (config) {
 
   return `<html>
   <head>
+    <link href="/public/css/tailwind.css" rel="stylesheet">
     ${
       /*<script>
       partytown = {
@@ -121,6 +122,11 @@ export default function (config) {
           : ''
       }
     </table>
+    
+    <img src="/public/img/profile-pic.png" alt="Austin Gil" width="300" height="300" >
+    <img src="/public/img/Cloud Computing Blog Cover.png" alt="Cloud Computing Blog Cover" width="600" height="300" >
+    <img src="/public/img/Command-Line-Blog-Cover.png" alt="Command Line Blog Cover" width="600" height="300" >
+    <img src="/public/img/Opinion Blog Cover.png" alt="Opinion Blog Cover" width="600" height="300" >
   </body>
   </html>`;
 }
