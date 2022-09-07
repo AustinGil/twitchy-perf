@@ -4,7 +4,8 @@
     "allowJs": true,
     "checkJs": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["bun-types"]
 //     "alwaysStrict": true,
 //     "strictNullChecks": false,
 //     "emitDeclarationOnly": true,

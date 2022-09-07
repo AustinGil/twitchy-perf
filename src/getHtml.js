@@ -2,24 +2,31 @@ import { convertBytes } from './utils.js';
 
 /** @param {number} count */
 function heavyLoad(count) {
-  if (count >= 100) {
-    count = 100;
+  count = Math.min(count, 100) * 10000;
+  const arr = [];
+  for (let i = 0; x < count; i++) {
+    const obj = {};
+    obj[i] = count.toString();
+    arr.push(obj);
   }
-  count = (count / 100) * 1000;
-  let b = [];
-  for (let x = 1; x < count + 1; x++) {
-    for (let y = 1; y < count + 1; y++) {
-      for (let z = 1; z < count; z++) {
-        var _arr = {};
-        var _obj = [];
-        var _ttl = x + y + z;
-        _obj[_ttl] = x * y * z * x + x * y * z * y + x * y * z * z;
-        _arr[`${x},${y},${z}`] = _obj[x + y + z];
-        b.push(_arr);
-      }
-    }
-  }
-  return b;
+  // if (count >= 100) {
+  //   count = 100;
+  // }
+  // count = (count / 100) * 1000;
+  // let b = [];
+  // for (let x = 1; x < count + 1; x++) {
+  //   for (let y = 1; y < count + 1; y++) {
+  //     for (let z = 1; z < count; z++) {
+  //       var _arr = {};
+  //       var _obj = [];
+  //       var _ttl = x + y + z;
+  //       _obj[_ttl] = x * y * z * x + x * y * z * y + x * y * z * z;
+  //       _arr[`${x},${y},${z}`] = _obj[x + y + z];
+  //       b.push(_arr);
+  //     }
+  //   }
+  // }
+  return arr;
 }
 
 /**
@@ -205,7 +212,7 @@ export default function (config) {
           <legend>Compute</legend>
           <div>
             <label for="cpu-load">Synthetic load (0-30)</label>
-            <input id="cpu-load" name="cpu-load" type="number" min="0" max="30" value="${
+            <input id="cpu-load" name="cpu-load" type="number" min="0" max="100" value="${
               load ? load : ''
             }" />
           </div>
