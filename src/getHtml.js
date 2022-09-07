@@ -2,12 +2,10 @@ import { convertBytes } from './utils.js';
 
 /** @param {number} count */
 function heavyLoad(count) {
-  count = count * 100000;
+  count = count * 10000;
   const arr = [];
   for (let i = 0; i < count; i++) {
-    const obj = {};
-    obj[i] = count.toString();
-    arr.push(obj);
+    arr.push(count);
   }
   // if (count >= 100) {
   //   count = 100;
