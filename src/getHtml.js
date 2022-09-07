@@ -4,10 +4,10 @@ import { convertBytes } from './utils.js';
 function heavyLoad(count) {
   count = Math.min(count, 100) * 10000;
   const arr = [];
-  for (let i = 0; x < count; i++) {
+  for (let i = 0; i < count; i++) {
     const obj = {};
     obj[i] = count.toString();
-    arr.push(obj);
+    arr.unshift(obj);
   }
   // if (count >= 100) {
   //   count = 100;
