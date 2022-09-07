@@ -7,7 +7,7 @@ function heavyLoad(count) {
   for (let i = 0; i < count; i++) {
     const obj = {};
     obj[i] = count.toString();
-    arr.unshift(obj);
+    arr.push(obj);
   }
   // if (count >= 100) {
   //   count = 100;
