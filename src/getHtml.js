@@ -2,7 +2,7 @@ import { convertBytes } from './utils.js';
 
 /** @param {number} count */
 function heavyLoad(count) {
-  count = Math.min(count, 100) * 10000;
+  count = count * 100000;
   const arr = [];
   for (let i = 0; i < count; i++) {
     const obj = {};
@@ -50,7 +50,7 @@ export default function (config) {
   let load = query.get('cpu-load');
 
   if (load) {
-    load = Math.floor(Math.max(0, Math.min(100, Number(load))));
+    load = Math.floor(Math.max(0, Number(load)));
     heavyLoad(load);
   }
 
