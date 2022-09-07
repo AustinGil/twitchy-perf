@@ -59,6 +59,10 @@ if (cluster.isPrimary) {
 // Application performance monitoring (New Relic / Dynatrace)
 // Time series DB
 // GZIP/Brottli
+// Compare node vs deno vs bun
+// vertical vs horizontal scaling
+// Testing with https://www.akamai.com/products/cloudtest
+// multi-threading: https://www.digitalocean.com/community/tutorials/how-to-use-multithreading-in-node-js
 
 // CLIENT SIDE:
 // Caching: CDN, Browser, HTTP
@@ -66,5 +70,7 @@ if (cluster.isPrimary) {
 // HTTP priority hints (prefetch/preconnect)
 // Deferred script loading
 // JS client side perf reporting
-// Image optimization (size, quality, lazy)
+// Image optimization (size, quality, lazy, decode, webp, avif, fetchpriority)
 // Resource offloading (CDN, EdgeWorker)
+// CSS transforms vs other stuff
+// WASM???
