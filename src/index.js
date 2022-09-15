@@ -74,3 +74,4 @@ if (cluster.isPrimary) {
 // Resource offloading (CDN, EdgeWorker)
 // CSS transforms vs other stuff
 // WASM???
+// Test memory leaks with memlab
